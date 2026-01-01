@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 97%;
+    --foreground: 350 30% 20%;
+
+    --card: 30 40% 95%;
+    --card-foreground: 350 30% 20%;
+
+    --popover: 30 40% 95%;
+    --popover-foreground: 350 30% 20%;
+
+    --primary: 350 60% 65%;
+    --primary-foreground: 30 50% 98%;
+
+    --secondary: 35 80% 85%;
+    --secondary-foreground: 350 30% 25%;
+
+    --muted: 30 30% 90%;
+    --muted-foreground: 350 20% 45%;
+
+    --accent: 38 70% 60%;
+    --accent-foreground: 30 50% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 30% 85%;
+    --input: 350 30% 85%;
+    --ring: 350 60% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom romantic palette */
+    --rose: 350 60% 65%;
+    --rose-light: 350 70% 85%;
+    --rose-dark: 350 50% 45%;
+    --cream: 35 60% 95%;
+    --cream-dark: 35 40% 88%;
+    --gold: 38 70% 55%;
+    --gold-light: 38 80% 75%;
+    --blush: 10 60% 90%;
+    --parchment: 40 50% 92%;
+    --wine: 350 45% 35%;
+    
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(350 70% 92%), hsl(30 60% 95%), hsl(350 60% 88%));
+    --gradient-gold: linear-gradient(135deg, hsl(38 70% 55%), hsl(45 80% 70%));
+    --gradient-parchment: linear-gradient(180deg, hsl(40 50% 94%), hsl(35 40% 88%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(350 40% 70% / 0.3);
+    --shadow-glow: 0 0 30px hsl(350 60% 65% / 0.4);
+    --shadow-gold: 0 4px 15px hsl(38 70% 50% / 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 30 50% 95%;
+
+    --card: 350 25% 12%;
+    --card-foreground: 30 50% 95%;
+
+    --popover: 350 25% 12%;
+    --popover-foreground: 30 50% 95%;
+
+    --primary: 350 55% 60%;
+    --primary-foreground: 350 30% 10%;
+
+    --secondary: 35 40% 25%;
+    --secondary-foreground: 30 50% 95%;
+
+    --muted: 350 20% 18%;
+    --muted-foreground: 30 30% 65%;
+
+    --accent: 38 60% 50%;
+    --accent-foreground: 350 30% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 20% 20%;
+    --input: 350 20% 20%;
+    --ring: 350 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif antialiased;
+    background: var(--gradient-romantic);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-serif {
+    font-family: 'Cormorant Garamond', 'Lora', serif;
+  }
+  
+  .text-shadow-romantic {
+    text-shadow: 0 2px 10px hsl(350 60% 65% / 0.3);
+  }
+  
+  .parchment-texture {
+    background-color: hsl(40 50% 94%);
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"),
+      var(--gradient-parchment);
+  }
+  
+  .wax-seal {
+    background: linear-gradient(145deg, hsl(350 50% 40%), hsl(350 60% 30%));
+    box-shadow: 
+      inset 0 2px 4px hsl(350 60% 50% / 0.3),
+      0 4px 8px hsl(350 40% 20% / 0.4);
+  }
+  
+  .polaroid-frame {
+    background: linear-gradient(145deg, hsl(0 0% 99%), hsl(40 20% 94%));
+    box-shadow: 
+      0 4px 12px hsl(0 0% 0% / 0.15),
+      0 2px 4px hsl(0 0% 0% / 0.1);
+  }
+  
+  .ticket-perforation {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 8px,
+      hsl(var(--muted)) 8px,
+      hsl(var(--muted)) 10px
+    );
+  }
+  
+  .glass-jar {
+    background: linear-gradient(
+      135deg,
+      hsl(180 20% 95% / 0.6),
+      hsl(180 15% 90% / 0.4),
+      hsl(180 20% 95% / 0.5)
+    );
+    backdrop-filter: blur(4px);
+  }
+  
+  .cassette-body {
+    background: linear-gradient(
+      180deg,
+      hsl(30 20% 25%),
+      hsl(30 15% 18%),
+      hsl(30 20% 22%)
+    );
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+  
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+  
+  .animate-flutter {
+    animation: flutter 2s ease-out forwards;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 4s linear infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-confetti {
+    animation: confetti 1s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(0.5deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes flutter {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) rotate(-10deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px) rotate(5deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(350 60% 65% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(350 60% 65% / 0.6);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heart-float {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateY(90vh) rotate(10deg) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(-10deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes box-open {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-110deg);
+  }
+}
+
+@keyframes gift-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
+  }
+  60% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.heart-particle {
+  animation: heart-float linear forwards;
+}
+
+.box-lid-open {
+  animation: box-open 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: top center;
+}
+
+.gift-reveal {
+  animation: gift-reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
