@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# 🎁 Digital Keepsake Box - For My Sandu
 
-## Project info
+A beautiful, interactive digital gift box built with React and Tailwind CSS. This project is a virtual collection of memories, songs, and love notes, designed as a special gift.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Project Preview](public/og-image.png)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+-   **💌 Personal Letter**: A heartfelt letter sealed with a digital wax seal.
+-   **📸 Polaroids Gallery**: A collection of 14 special photo memories. Click to expand and view them in detail.
+-   **🎵 Mixtape for You**: A fully functional cassette player with 5 curated tracks that play real audio.
+-   **🎟️ Love Coupons**: Redeemable coupons for special experiences (Movie Night, Dinner Date, etc.). Includes a "Download" feature to save them as images!
+-   **🍯 Jar of Affirmations**: A jar containing 365 unique love notes—one for every day of the year. It remembers which ones you've pulled!
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+-   **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Components**: [Radix UI](https://www.radix-ui.com/) (via shadcn/ui)
+-   **Animations**: CSS Keyframes & Transitions
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/ShubhamTalekar1/digital_keepsake.git
+    cd digital_keepsake
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-Follow these steps:
+## 📦 Deployment
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+This project is optimized for deployment on **Vercel**.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1.  Push your changes to GitHub.
+2.  Import the project in Vercel.
+3.  Vercel will detect Vite and deploy automatically.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 💝 Customization
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+-   **Photos**: Add your images to `public/photos` and update `src/components/PolaroidPhotos.tsx`.
+-   **Music**: Add MP3s to `public/audio` and update `src/components/CassetteTapePlayer.tsx`.
+-   **Letter**: Edit the text in `src/components/PersonalLetter.tsx`.
+-   **Affirmations**: Update the list in `src/data/affirmations.ts`.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+*Made with love.* ❤️
